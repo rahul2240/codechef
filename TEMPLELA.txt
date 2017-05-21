@@ -1,0 +1,50 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  int i,a,s[100],b[100],j,k,length,t=0,y=0;
+  cin>>a;
+  while(a>0)
+  {  t=0;
+      cin>>length;
+      
+      for(i=0;i<length;i++)
+      {
+        cin>>s[i];
+      }
+      
+        if(length%2!=0)
+        { for(j=(length/2);j>=0;j--)
+              {
+              b[j]=j+1;
+              
+              }
+              j=length/2;
+          for(k=((length/2)+1);k<length;k++)
+              {  
+              
+              b[k]=j;
+              j--;
+              }
+              for(i=0;i<length;i++)
+       { if(b[i]!=s[i])
+          {
+            t++;
+          }
+       }
+    if(t==0)
+    {cout<<"yes\n";}
+    else
+    {cout<<"no\n";}
+        }
+        else
+        {cout<<"no\n";}
+        
+        
+      
+    
+    
+      a--;
+  }
+  
+}
