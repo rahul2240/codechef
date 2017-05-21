@@ -1,0 +1,72 @@
+no_of_response = gets.to_i
+
+no_of_response.times do
+    
+        length=gets.to_i
+        
+        string=gets.split("").map(&:to_s)
+         
+             if string.length == length+1
+                if string.count('.') == length
+                  puts 'Valid'
+                else
+                if string.count('H') == string.count('T')
+                    
+                    if string.include?('H' || 'T' || '.') == true
+                            p=1
+                            w=0
+                            while p!=0
+                                    
+                                    h=string.index('H')
+                                    t=string.index('T')
+                                    
+                                        if h<t
+                                                x=h+1
+                                                    loop do 
+                                                            if x<t
+                                                            if string[x] != 'H' 
+                                                                x +=1
+                                                            else
+                                                                p=0
+                                                                puts 'Invalid'
+                                                                
+                                                                w=1
+                                                                break
+                                                                
+                                                            end
+                                                            else
+                                                            break
+                                                            end
+                                                    end
+                                                    if w==0
+                                                        delete_list = ['H','T']
+                                                        delete_list.each do |del|
+                                                        string.delete_at(string.index(del))
+                                                        end
+                                                         if string.include?('H') == false
+                                                             puts 'Valid'
+                                                             p=0
+                                                         end
+                                                         
+                                                    end
+                                        else
+                                            puts 'Invalid'
+                                            p=0
+                                            break
+                                        end
+                            end
+                    else
+                        puts 'Invalid'
+                    end
+                else
+                    puts 'Invalid'
+                end
+              end
+                
+                
+            else
+              puts 'Invalid'
+             end
+    
+    
+end
