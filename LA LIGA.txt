@@ -1,0 +1,41 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+  int t,i,barca,eibar,real,mala;
+  string a;
+  cin>>t;
+  while(t>0)
+  {
+    
+    for(i=0;i<4;i++)
+    {
+      cin>>a;
+      
+        if(a=="Barcelona")
+        {
+          cin>>barca;
+        }
+        else if(a=="RealMadrid")
+        {
+          cin>>real;
+        }
+        else if(a=="Eibar")
+        {
+          cin>>eibar;
+        }
+        else{
+          cin>>mala;
+        }
+    }
+    
+    if(mala>real && barca>eibar)
+    {cout<<"Barcelona\n";}
+    else
+    {cout<<"RealMadrid\n";}
+    t--;
+  }
+  
+  return 0;
+}
