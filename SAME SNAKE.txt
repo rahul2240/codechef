@@ -1,0 +1,23 @@
+test_cases = gets.to_i
+
+test_cases.times do
+  
+  sone= gets.split(" ").map(&:to_i)
+  stwo= gets.split(" ").map(&:to_i)
+  
+  if sone[1]==sone[3] && stwo[1]==stwo[3] && sone[1]==stwo[1] && (stwo[0].between?(sone[0],sone[2]) || stwo[2].between?(sone[0],sone[2])) 
+    puts "yes"
+    
+  elsif sone[0]==sone[2] && stwo[0]==stwo[2] && sone[0]==stwo[0] && (stwo[1].between?(sone[1],sone[3]) || stwo[3].between?(sone[1],sone[3])) 
+    puts "yes"
+    
+    elsif ((sone[0]==stwo[0] && sone[1]==stwo[1]) || (sone[2]==stwo[2] && sone[3]==stwo[3]) || (sone[0]==stwo[2] && sone[1]==stwo[3]) || (stwo[0]==sone[2] && stwo[1]==sone[3])) && (stwo[0].between?(sone[0]+1,sone[2]-1)==false || stwo[2].between?(sone[0]+1,sone[2]-1)==false) && (stwo[1].between?(sone[1]+1,sone[3]-1)==false || stwo[3].between?(sone[1]+1,sone[3]-1)==false )
+    puts "yes"
+    
+  else
+    puts "no"
+end
+  
+  
+  
+end
