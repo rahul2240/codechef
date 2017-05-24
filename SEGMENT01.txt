@@ -1,0 +1,28 @@
+
+t=gets.to_i
+
+t.times do
+   
+    s=gets.split("").map(&:to_s)
+   
+     if s.include? '1'
+       
+        l=s.count('1')
+         k=s.index('1')
+         j=k+l;
+         h=0
+            (k...j).each do |x|
+                if s[x]=='0'
+                   h = 1 
+                end
+            end
+                    if(h==1)
+                        puts 'NO'
+                    else
+                        puts 'YES'
+                    end
+    else
+          puts 'NO'
+    end
+            
+end
