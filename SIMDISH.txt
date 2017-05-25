@@ -1,0 +1,21 @@
+t = gets.to_i
+
+t.times do
+   a=gets.split(" ").map(&:to_s)
+   b=gets.split(" ").map(&:to_s)
+   k=0
+   (0...4).each do |x|
+       (0...4).each do |y|
+            if a[x]==b[y]
+             k += 1
+            end
+        end
+    end 
+    
+    if k>=2
+        puts 'similar'
+    else
+        puts 'dissimilar'
+    end
+    
+end
