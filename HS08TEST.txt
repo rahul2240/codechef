@@ -1,0 +1,15 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+	int w;
+	float s,a;
+	cin>>w>>a;
+	if(w+0.5<=a && w%5==0)
+	{ s=a-w-0.5;}
+	else
+	{s=a;}
+	cout<<setprecision(2)<<fixed<<s;
+	return 0;
+}
