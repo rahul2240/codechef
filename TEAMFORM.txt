@@ -1,0 +1,19 @@
+t= gets.to_i
+
+t.times do
+    
+   a=gets.split(" ").map(&:to_i)
+   
+   a[1].times do 
+       
+      b=gets.split(" ").map(&:to_i) 
+       
+       
+   end
+    p=a[0]-(2*a[1])
+    if p%2==0
+        puts 'yes'
+    else
+        puts 'no'
+    end
+end
