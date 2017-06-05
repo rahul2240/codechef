@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+ 
+int main() {
+	int a[500],t,b,i,j;
+ 
+	cin>>t;
+	while(t>0)
+	{   
+	    cin>>b;
+	    j=13;
+	       for(i=0;i<b;i++)
+	       {
+	           a[i]=i+j;
+	           j+=5;
+	       }
+	           for(i=0;i<b;i++)
+	       {
+	           cout<<a[i]<<" ";
+	       }
+	         cout<<"\n";
+	    t--;
+	}
+	
+	return 0;
+}
+ 
