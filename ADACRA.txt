@@ -1,0 +1,57 @@
+test = gets.to_i
+test.times do
+      name=gets.split('').map(&:to_s)
+      
+      if name.length-1 == name.count('D')
+        
+        puts 0
+        
+      elsif name.length-1 == name.count('U')
+        
+        puts 0
+      else
+        
+              names=name.dup
+              
+              p=0 
+              q=0
+              
+              x=0 
+              until x == name.length-1
+                if name[x]=='U'
+                  name[x]='D'
+                  p += 1
+                  y=x+1
+                  while name[y]=='U'
+                      name[y]='D'      
+                      y += 1  
+                  end
+        
+                end
+              x +=1
+            end
+            
+            c=0
+              until c== names.length-1
+                if names[c]=='D'
+                  names[c]='U'
+                  q += 1
+                  v=c+1
+                  while names[v]=='D'
+                      names[v]='U'      
+                      v += 1  
+                  end
+        
+              end
+              c +=1 
+            end
+            
+            
+            if p>=q
+              puts q
+            else
+              puts p
+            end
+        
+      end
+end
