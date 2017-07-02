@@ -1,0 +1,35 @@
+# cook your code here
+test_cases= gets.to_i
+test_cases.times do
+z = gets.split(" ").map(&:to_i) #value of size and sum needed
+a = gets.split(" ").map(&:to_i) # array A
+size = z[0]
+
+r=Array.new(0)
+count = 0
+a.sort!
+a.each do |y|
+  b=Array.new(0)
+  for x in 0...size
+    if a[x]>y
+      b << y
+    else
+      b << a[x]
+    end
+  end
+
+
+ v = b.inject(0){|sum,w| sum += w}
+ 
+ if v == z[1]
+   r << y
+   count += 1
+ end
+end
+
+if count == 0
+  puts -1
+else
+  puts r.min
+end
+end

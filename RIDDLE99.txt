@@ -1,0 +1,13 @@
+# cook your code here
+test_cases = gets.to_i
+test_cases.times do
+   a = gets.split(" ").map(&:to_i)
+   p=0
+   (a[0]..a[1]).each do |x|
+       if x%a[2] == 0
+           p +=1
+       end
+   end
+    puts p
+    
+end
