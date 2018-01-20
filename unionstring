@@ -1,0 +1,23 @@
+gets.to_i.times do 
+  
+  a = gets.split("").map(&:to_i)
+  a[8] = a[0]
+  
+  count=0
+  
+  for x in 0...8
+    if a[x]!=a[x+1]
+      count+=1
+      
+    end
+    
+  end
+  
+  if count>2
+    puts "non-uniform"
+  else
+    puts "uniform"
+  end
+  
+  
+end
