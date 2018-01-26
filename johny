@@ -1,0 +1,14 @@
+gets.to_i.times do
+  
+  n = gets.to_i
+  a = gets.split(" ").map(&:to_i)
+  k = gets.to_i
+  
+  p = a[k-1]
+  
+  a = a.sort
+  
+  puts a.index(p)+1
+  
+  
+end
