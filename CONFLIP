@@ -1,0 +1,42 @@
+gets.to_i.times do
+
+g = gets.to_i
+g.times do
+  
+    a = gets.split(" ").map(&:to_i)
+    i = a[0]
+    n = a[1]
+    q = a[2]
+    
+    arr = Array.new
+  
+    head = 0
+    tail = 0
+    
+    if i==1
+      if n%2==0
+        head = n/2
+        tail = n/2
+      else
+        head = (n/2)
+        tail = n/2+1
+      end
+    else
+      if n%2==0
+        head = n/2
+        tail = n/2
+      else
+        head = n/2+1
+        tail = (n/2)
+      end
+    end
+    
+    if q==1
+      puts head
+    else
+      puts tail
+    end
+    
+  
+end
+end
