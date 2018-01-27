@@ -1,0 +1,51 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  int m,n,rx,ry,t,i,len,u,d,l,r;
+  char path[100000];
+  
+  cin>>t;
+  d=1;
+  while(t--){
+    u=0;
+ 
+    l=0;
+    r=0;
+    cin>>m>>n;
+    cin>>rx>>ry;
+    cin>>len;
+    
+    for(i=0;i<len;i++)
+      cin>>path[i];
+      
+    for(i=0;i<len;i++)
+    {
+      if(path[i]=='U')
+        u++;
+      else if(path[i]=='D')
+        u--;
+      else if(path[i]=='L')
+        r--;
+      else
+        r++;
+        
+        
+    }
+    cout<<"Case "<<d<<": ";
+    d++;
+    if(u==ry && r==rx)
+    {
+      cout<<"REACHED"<<endl;
+    }
+    else if(u<0 || u>n || r<0 || r>m)
+    {
+      cout<<"DANGER"<<endl;
+    }
+    else
+    {
+      cout<<"SOMEWHERE"<<endl;
+    }
+    
+  }
+}
