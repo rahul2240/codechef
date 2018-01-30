@@ -1,0 +1,45 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  
+  int t,n,x,b[1000],f,c,d,sum,i,z;
+  cin>>t;
+  
+  while(t--)
+  {
+    cin>>n>>x;
+    sum=0;
+    for(i=0;i<n;i++)
+    {
+      cin>>b[i];
+      sum = sum + b[i];
+    }
+    
+    c = sum%x;
+    d = (sum-c)/x;
+    f=0;
+   
+   
+   
+      for(i=0;i<n;i++){
+        if(b[i]<=c)
+         {  f=1;
+           break;
+         } 
+        
+      }
+      
+      if(f==0)
+        cout<<d<<endl;
+      else
+        cout<<-1<<endl;
+      
+      
+   
+   
+  }
+  
+
+
+}
