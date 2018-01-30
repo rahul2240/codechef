@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  int t,i,k,found;
+  
+  
+  cin>>t;
+  
+  while(t--){
+        char j[101],s[101];
+        cin>>j;
+        cin>>s;
+        
+        found=0;
+        
+        for(k=0;s[k]!='\0';k++)
+        {
+          for(i=0;j[i]!='\0';i++)
+          {
+              if(j[i]==s[k])
+              {
+                found+=1;
+                break;
+              }
+          }
+        }
+        cout<<found<<endl;
+  }
+}
