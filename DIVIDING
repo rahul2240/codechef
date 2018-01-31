@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  int n,a,f,i;
+  long long int sum,pin;
+  cin>>n;
+  sum=0;
+  pin=0;
+  f=0;
+  for(i=0;i<n;i++)
+  {
+    cin>>a;
+    sum = sum+a;
+  }
+  
+  for(i=1;i<=sum;i++)
+  {
+    pin = pin+i;
+    if(pin==sum)
+    { f=1;
+      break;
+      
+    }
+    else if(pin>sum)
+      break;
+  }
+  
+  if(f==0)
+    cout<<"NO"<<endl;
+    else
+    cout<<"YES"<<endl;
+}
