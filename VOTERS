@@ -1,0 +1,17 @@
+a = gets.split(" ").map(&:to_i)
+b = Hash.new(0)
+c = Array.new(0)
+z=0
+while z<a[0]+a[1]+a[2]
+  b[gets.to_i]+=1
+  z+=1
+end
+
+b.each do |x,y|
+  if y>=2
+    c<<x
+  end
+  
+end
+      puts c.length
+puts c.sort
