@@ -1,0 +1,18 @@
+require 'prime'
+
+gets.to_i.times do 
+  x,y = gets.split().map(&:to_i)
+  
+  sum = x+y;
+  
+  for i in 1..100000
+    sum = sum+i
+    if(sum.prime?)
+      puts i
+      break
+    else
+      sum = sum-i
+    end
+  end
+  
+end
