@@ -1,0 +1,28 @@
+gets.to_i.times do
+  s = gets.chomp.split("").map(&:to_s)
+  
+  count = 0;
+  for i in 0...(s.length-3)
+     a = ['c','h','e','f']
+    if a.include?(s[i])
+      a.delete(s[i])
+      if  a.include?(s[i+1]) 
+          a.delete(s[i+1])
+        if a.include?(s[i+2])
+            a.delete(s[i+2])
+          if a.include?(s[i+3])
+            count+=1
+          
+          end
+        end
+       end
+    end
+  end
+  
+  if count>0
+    puts "lovely #{count}"
+  else
+    puts "normal"
+  end
+  
+end
