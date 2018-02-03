@@ -1,0 +1,63 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  int s_odd,s_even,i,x,k,m,n,t,done;
+  char s[1]; 
+  
+  cin>>t;
+  while(t--)
+  {
+    cin>>n>>m>>x>>k;
+    s_even = 0;
+    s_odd = 0;
+    
+    for(i=0;i<k;i++)
+    {
+      cin>>s[0];
+      if(s[0]=='E')
+        s_even += 1;
+      else
+        s_odd += 1;
+    }
+    
+    done = 0;
+    for(i=1;i<=m;i++)
+    {
+      if(i%2==1)
+      {
+        if(x>=s_odd)
+        {
+          done = done + s_odd;
+          s_odd = 0;
+        }
+        else
+        {
+          s_odd = s_odd - x;
+          done = done + x;
+        }
+      }
+      else
+      {
+        if(x>=s_even)
+        {
+          done = done + s_even;
+          s_even = 0;
+        }
+        else
+        {
+          s_even = s_even -x;
+          done = done + x;
+        }
+      }
+      if(n<=done)
+        break;
+    }
+    
+    if(n<=done)
+      cout<<"yes"<<endl;
+    else
+      cout<<"no"<<endl;
+    
+  }
+}
