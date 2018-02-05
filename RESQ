@@ -1,0 +1,27 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+int main() {
+  int t,i,n,min,x,p;
+  
+  cin>>t;
+  
+  while(t--)
+  {
+    cin>>n;
+    min = n-1;
+ 
+    for(i=2;i<=sqrt(n);i++)
+    {
+      if(n%i==0)
+      { (((n/i)-i)<0)?(x = i-(n/i)):(x = (n/i)-i);
+        if (x<min)
+        min = (n/i)-i;
+      }
+      
+    }
+    
+    cout<<min<<endl;
+  }
+}
