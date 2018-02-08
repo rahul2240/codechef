@@ -1,0 +1,22 @@
+gets.to_i.times do 
+  n = gets.chomp.to_i
+  
+  a = Array.new(0)
+  b = Array.new(0)  
+  while n>0
+    
+    a<<gets.chomp.to_s
+    
+    n-=1
+  end
+  
+    b = a.uniq
+    
+    if a.count(b[0])>a.count(b[1])
+      puts b[0]
+    elsif a.count(b[0])==a.count(b[1])
+      puts "Draw"
+    else
+      puts b[1]
+    end
+end
