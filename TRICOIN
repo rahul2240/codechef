@@ -1,0 +1,14 @@
+
+gets.to_i.times do 
+  t = gets.chomp.to_i
+  sum = 1
+  count=1
+  while(sum<=t)
+    
+    count+=1
+    sum = sum + count
+      
+  end 
+  
+  puts count - 1
+end
