@@ -1,0 +1,20 @@
+gets.to_i.times do
+  
+  n,m,k = gets.chomp.split(" ")
+  
+  ma = gets.chomp.split(" ").map(&:to_i)
+  
+  ka = gets.chomp.split(" ").map(&:to_i)
+  
+  na = Array(1..(n.to_i))
+
+ 
+  if (ma-ka).length>=(ka-ma).length
+    print "#{ ma.length - (ma-ka).length} #{((na-ka)-ma).length}"
+    puts
+  else
+    print "#{ ka.length - (ka-ma).length} #{((na-ka)-ma).length}"
+    puts
+  end
+  
+end
