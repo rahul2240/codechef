@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  int t,max,l,b,ans,i;
+  cin>>t;
+  
+  while(t--)
+  {
+    cin>>l>>b;
+ 
+    if(l>b)
+    { 
+      for(i=1;i<=b;i++)
+      {
+        if(l%i==0 && b%i==0)
+        {
+          max = i;
+        }
+      }
+      
+      ans = (l*b)/(max*max);
+    }
+    else if(b>l)
+    {
+      for(i=1;i<=l;i++)
+      {
+        if(l%i==0 && b%i==0)
+        {
+          max = i;
+        }
+      }
+      
+      ans = (l*b)/(max*max);
+    }
+    else
+    {
+      ans = 1;
+    }
+    
+    cout<<ans<<endl;
+  }
+}
