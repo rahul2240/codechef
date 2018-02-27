@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+int main() {
+  long long int t,n,k,count,x,p,i;
+  
+  cin>>t;
+  
+  while(t--)
+  {
+    cin>>n>>k;
+    count = 0;
+    for(i=0;i<n;i++)
+    {
+      cin>>x;
+      p = x%k;
+    if(x>=k){
+    
+        if(p>k-p)
+          p = k-p;
+          
+       count+=p; 
+    }
+    else
+      count+= k-p;
+    }
+    cout<<count<<endl;
+  }
+}
