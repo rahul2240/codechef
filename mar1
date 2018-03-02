@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  long long int t,n,a[100000],b[100000],i,j,front,back;
+  
+  cin>>t;
+  
+  while(t--)
+  {
+    cin>>n;
+    
+    for(i=0;i<n;i++)
+      cin>>a[i];
+      front=back=0;
+    for(i=0;i<n;i++)
+    {
+      cin>>b[i];
+      
+      if(a[i]<=b[i])
+        front++;
+        
+      if (a[n-i-1]<=b[i])
+        back++;
+    }
+    
+    if(front==n && back==n)
+    {
+      cout<<"both"<<endl;
+    }
+    else if (front==n)
+    {
+      cout<<"front"<<endl;
+    }
+    else if (back==n)
+    {
+      cout<<"back"<<endl;
+    }
+    else
+    {
+      cout<<"none"<<endl;
+    }
+  }
+}
