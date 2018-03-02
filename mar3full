@@ -1,0 +1,38 @@
+#include <iostream>
+#include <algorithm> 
+
+using namespace std;
+
+int main() {
+	long long int t,n,a[100000],i,j,max,count,pin;
+	
+	cin>>t;
+	
+	while(t--)
+	{
+	    cin>>n;
+	    
+	    for(i=0;i<n;i++)
+	    {
+	        cin>>a[i];
+	    }
+	    sort(a,a+n);
+	    count=0;
+	    
+	    for(i=0;i<n-1;i++)
+	    {   
+	        if(a[i]==a[i+1])
+	        {
+	            count++;
+	        }
+	    }
+	       // for(i=0;i<n;i++)
+	        //cout<<a[i];
+	        //cout<<endl;
+	        cout<<count<<endl;
+	        
+	  
+	    
+	}
+	return 0;
+}
