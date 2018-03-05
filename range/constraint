@@ -1,0 +1,7 @@
+10^9 = 2^31
+
+so if I have to use a loop in binary search whose end is not known then
+
+as mid = start+end/2
+
+therefore mid can be obtained maximum 30-31 times.
