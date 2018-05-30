@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int i,n,t;
+
+    cin>>t;
+
+    while(t--){
+        cin>>n;
+        for(i=1;i<=n;i++)
+        {
+            cout<<i+99<<" ";
+        }
+
+        cout<<endl;
+    }
+    return 0;
+}
