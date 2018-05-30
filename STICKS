@@ -1,0 +1,43 @@
+#include <iostream>
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int test_cases,i,sum,c,no_of_element,a[100000];
+
+    cin>>test_cases;
+
+    while(test_cases--)
+    {
+        cin>>no_of_element;
+
+        for( i=0; i < no_of_element; i++)
+        {
+            cin>>a[i];
+        }
+        sort(a, a+no_of_element);
+        c=0;
+        sum=1;
+        for(i=no_of_element-1; i>0; i--)
+        {
+            if(a[i] == a[i-1])
+            {
+                sum = sum * a[i];
+                c++;
+                i--;
+            }
+
+            if(c==2)
+            {
+                break;
+            }
+        }
+        if(c==2)
+            cout<<sum<<endl;
+        else
+            cout<<-1<<endl;
+    }
+    return 0;
+}
