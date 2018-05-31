@@ -1,0 +1,53 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    long long int t, year, flag, i, pin, days, day, yes;
+
+    cin>>t;
+
+    while(t--){
+
+        cin>>year;
+        flag=0;
+        yes=0;
+        if(year>=2001)
+        {   yes=1;
+            pin = 2001;
+        }
+        else
+        {
+            pin = year;
+            year = 2001;
+        }
+
+        for(i = pin; i < year; i++)
+        {
+                if(i%4==0 && (i%400==0 || i%100!=0))
+                    flag++;
+        }
+
+        days = 365*(year-pin-flag) + 366*flag;
+
+        day = days%7;
+
+        if(day==0)
+            cout<<"monday"<<endl;
+        else if(day==1)
+            yes==1? cout<<"tuesday"<<endl : cout<<"sunday"<<endl;
+        else if(day==2)
+            yes==1? cout<<"wednesday"<<endl : cout<<"saturday"<<endl;
+        else if(day==3)
+            yes==1? cout<<"thursday"<<endl : cout<<"friday"<<endl;
+        else if(day==4)
+            yes==1? cout<<"friday"<<endl : cout<<"thursday"<<endl;
+        else if(day==5)
+            yes==1? cout<<"saturday"<<endl : cout<<"wednesday"<<endl;
+        else if(day==6)
+            yes==1? cout<<"sunday"<<endl : cout<<"tuesday"<<endl;
+
+    }
+    return 0;
+}
