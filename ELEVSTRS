@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int t;
+    double n, v1, v2, t1, t2;
+
+    cin>>t;
+
+    while(t--){
+
+        cin>>n>>v1>>v2;
+
+        t1 = (n*pow(2.0, 0.5))/v1;
+        t2 = (2*n)/v2;
+
+        //cout<<"t1= "<<t1<<endl;
+        //cout<<"t2= "<<t2<<endl;
+        //cout<<"2 = "<<pow(2, 0.5)<<endl;
+        if(t1<=t2)
+            cout<<"Stairs"<<endl;
+        else
+            cout<<"Elevator"<<endl;
+    }
+    return 0;
+}
