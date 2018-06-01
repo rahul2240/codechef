@@ -1,0 +1,45 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int t, snake, mong, i;
+    string s1;
+
+    cin>>t;
+
+    while(t--){
+
+        cin>>s1;
+
+        snake = mong = 0;
+
+        s1[s1.length()]='x';
+
+        for(i=0;i<s1.length();i++)
+        {   if(s1[i]=='m')
+                mong++;
+            else
+                snake++;
+        }
+        for(i=0;i<s1.length()-1;i++){
+            if((s1[i]=='s' && s1[i+1]=='m') || (s1[i]=='m' && s1[i+1]=='s'))
+            {
+                snake--;
+                s1[i] = 'x';
+                s1[i+1] = 'x';
+            }
+
+        }
+
+        if(mong==snake)
+            cout<<"tie"<<endl;
+        else if (mong>snake)
+            cout<<"mongooses"<<endl;
+        else
+            cout<<"snakes"<<endl;
+
+    }
+    return 0;
+}
