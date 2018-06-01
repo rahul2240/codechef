@@ -1,0 +1,51 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int t,i,n, flag;
+    string s;
+    char b[1];
+
+
+    cin>>t;
+
+    while(t--)
+    {   b[0]='.';
+        cin>>n;
+        cin>>s;
+        flag=0;
+        for(i=0;i<n;i++)
+        {
+            if(s[i]=='H')
+            {
+                if(b[0]=='.')
+                    b[0]='H';
+                else
+                {
+                    flag=1;
+                    break;
+                }
+
+            }
+            else if(s[i]=='T')
+            {
+                if(b[0]=='H')
+                    b[0]='.';
+                else
+                {
+                    flag=1;
+                    break;
+
+                }
+            }
+        }
+
+        if(flag==1 || b[0]!='.')
+            cout<<"Invalid"<<endl;
+        else
+            cout<<"Valid"<<endl;
+    }
+    return 0;
+}
