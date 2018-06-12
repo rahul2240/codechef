@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+ 
+using namespace std;
+ 
+int main()
+{
+    int t, n, a, b, i, x, a_prob, b_prob;
+ 
+    cin>>t;
+ 
+    while(t--){
+        cin>>n>>a>>b;
+ 
+        a_prob = b_prob = 0;
+ 
+        for(i = 0; i < n; i++)
+        {
+            cin>>x;
+            if(x==a)
+                a_prob++;
+ 
+            if(x==b)
+                b_prob++;
+        }
+        cout<<setprecision(10)<<fixed<<(double)(a_prob * b_prob)/(double)(n*n)<<endl;
+    }
+    return 0;
+}
