@@ -1,0 +1,20 @@
+    #include <iostream>
+    #include <bits/stdc++.h>
+    using namespace std;
+     
+    int main() {
+        
+        int t;
+        long double r,l,c,v,ans;
+        
+        cin>>t;
+        
+        while(t--){
+            cin>>r>>l>>c>>v;
+            
+            ans =  1 - ((r*r*c)/(4*l));
+            
+            cout<<fixed<<setprecision(6)<<ans<<endl;
+        }
+    	return 0;
+    } 
