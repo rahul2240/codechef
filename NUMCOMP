@@ -1,0 +1,19 @@
+
+t = int(raw_input())
+while t>0:
+	a,b,n = map(int, raw_input().split())
+	if n%2==1:
+		if a<b:
+			print 2
+		elif a>b:
+			print 1
+		else:
+			print 0
+	else:
+		if abs(a)<abs(b):
+			print 2
+		elif abs(a)>abs(b):
+			print 1
+		else:
+			print 0
+	t = t-1	
