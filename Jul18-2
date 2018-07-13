@@ -1,0 +1,31 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+constexpr int int_pow(int b, int e)
+{
+    return (e == 0) ? 1 : b * int_pow(b, e - 1);
+}
+
+int main()
+{
+    long long int t,n,m,i,a, count;
+    
+    cin>>t;
+    
+    while(t--){
+    
+        count = 0;
+        cin>>n>>m;
+        
+        for(i=0;i<n;i++){
+            cin>>a;
+            
+            if(a%m==0) count++;
+            
+            
+        }
+        
+        cout<<int_pow(2,count)-1<<endl;
+    
+    }
+}
