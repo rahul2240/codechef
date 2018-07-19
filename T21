@@ -1,0 +1,30 @@
+#include<bits/stdc++.h>
+using namespace std;
+ 
+int check(string str)
+{
+
+    long long int n = str.length();
+    long long int digitSum = 0;
+    for (long long int i=0; i<n; i++){
+        digitSum += (str[i]-'0');
+    }
+    return (digitSum % 3);
+}
+ 
+// Driver code
+int main()
+{
+    long long int t,a,b;
+
+    cin>>t;
+    while(t--){
+    string str1, str2;
+    cin>>str1>>str2;
+    a = check(str1);
+    b = check(str2);
+    
+    cout<<(a*b)%3<<endl;
+    }
+    return 0;
+}
