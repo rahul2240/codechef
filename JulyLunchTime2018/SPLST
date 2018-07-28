@@ -1,0 +1,50 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+#define ll long long
+
+int check(ll a,ll b,ll c,ll x,ll y ){
+    
+    int q=0;
+    
+    if( (a==(x-b)+(y-c)) && (x-b>=0) && (y-c>=0) )
+     q=1;
+    else if ( a==(x-c)+(y-b)  && (x-c>=0) && (y-b>=0))
+     q=1;
+  
+  return q;
+        
+}
+
+int main()
+{
+    ll t, a,b,c,x,y,p;
+    
+    cin>>t;
+    
+    while(t--){
+        p=0;
+        
+        cin>>a>>b>>c>>x>>y;
+        
+        p = check(a,b,c,x,y);
+        
+        if(p!=1){
+            p = check(b,a,c,x,y);
+        }
+        
+        if(p!=1){
+            p = check(c,a,b,x,y);
+        }
+        
+        if(p==1){
+            cout<<"YES"<<endl;
+        } else {
+            cout<<"NO"<<endl;    
+        }
+
+        
+    }
+}
