@@ -1,0 +1,34 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+  long long int t,n,k,mk[100000],ct[100000],i,val,z;
+  
+  cin>>t;
+  
+  while(t--){
+      
+        cin>>n>>k;
+        
+        for(i=0;i<n;i++) cin>>mk[i];
+        for(i=0;i<n;i++) cin>>ct[i];
+        
+         sort(ct,ct+n);
+         sort(mk,mk+n);
+         val=0;
+         z=0;
+         for(i=0; i<n; i++)
+         {  
+             if(mk[i]<ct[n-k+z]) {
+                 val++;
+                 z++;}
+                 
+                 if(val>=k) break;
+         }
+         
+         (val>=k)? cout<<"YES"<<endl:cout<<"NO"<<endl; 
+        
+   }
+}
