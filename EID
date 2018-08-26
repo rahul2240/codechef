@@ -1,0 +1,11 @@
+test = int(raw_input())
+while test>0:
+    n = int(raw_input())
+    coin = map(int, raw_input().split())
+    coin.sort()
+    diff = abs(coin[1]-coin[0])
+    for i in range(1,n-1):
+        if diff>coin[i+1]-coin[i]:
+            diff = coin[i+1]-coin[i]
+    print diff
+    test-=1
