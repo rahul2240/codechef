@@ -1,0 +1,13 @@
+t = int(input())
+for i in range(t):
+    n, k = [int(x) for x in input().split()]
+    a = [int(x) for x in input().split()]
+    #print("n=",n)
+    #print("k=",k)
+    #print(a)
+    one = a.count(1)
+    #print(one)
+    if k>=n-one:
+        print("YES")
+    else:
+        print("NO")
