@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  int max_less, b, i, n, j;
+
+  cin>>n;
+  int max=0;
+  for(i=0;i<n;i++) {
+    cin>>b;
+    if(i==0) max = b;
+    else if (max<b) {
+      max_less = max;
+      max = b;
+    }
+  }
+
+  cout<<max_less;
+}
