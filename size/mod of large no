@@ -1,0 +1,30 @@
+Initialize mod = 0
+First take first digit (from right) and find 
+mod using formula:
+mod = (mod * 10 + digit) % m
+quo[i] = mod / m
+where i denotes the position of quotient number
+
+Let's take an example.
+num = 12345
+m = 9
+Initialize mod = 0
+quo[i] = (mod * 10 + num[i]) / m
+mod = (mod * 10 + num[i]) % 10
+Where i denotes the position of the i-th digit
+
+1) quo[1] = (0 * 10 + 1) / 9 = 0
+   mod = (0 * 10 + 1) % 9 = 1
+2) quo[2] = (1 * 10 + 2) / 9 = 12 / 9 = 1 
+   mod = (1 * 10 + 2) % 9 = 12 % 9 = 3
+3) quo[3] = (3 * 10 + 3) / 9 = 33 / 9 = 3
+   mod = (3 * 10 + 3) % 9 = 33 % 9 = 6
+4) quo[4] = (6 * 10 + 4) / 9 = 64 / 9 = 7
+   mod = (6 * 10 + 4) % 9 = 64 % 9 = 1
+5) quo[5] = (1 * 10 + 5) / 9 = 15 / 9 = 1
+   mod = (1 * 10 + 5) % 9 = 15 % 9 = 6
+
+
+Concatenating all values of quotient together
+(from 1 to n) where n is the number of digits. 
+Thus, modulus is 6 and quotient is 01371.
