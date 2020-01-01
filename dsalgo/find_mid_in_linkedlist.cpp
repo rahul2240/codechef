@@ -1,3 +1,7 @@
+#Traverse linked list using two pointers. Move one pointer by one and other pointer by two. 
+#When the fast pointer reaches end slow pointer will reach middle of the linked list.
+
+
 #include <iostream>
 
 using namespace std;
